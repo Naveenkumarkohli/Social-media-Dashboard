@@ -9,7 +9,7 @@ export default function PostForm() {
   const dispatch = useDispatch()
   const { user } = useAuth()
 
-  const isValid = title.length > 5 && body.length > 10
+  const isValid = title.trim().length > 0 && body.trim().length > 0
 
   const handleSubmit = (e) => {
     e.preventDefault()
